@@ -1,0 +1,11 @@
+!graphics
+ screenWidth: 1440
+ screenHeight: 900
+ fullscreen: true
+ ---
+!controls
+ moveUp: w
+ moveDown: s
+ moveLeft: a
+ moveRight: d
+ reload: r

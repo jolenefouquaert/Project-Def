@@ -60,6 +60,8 @@ public class Main extends Application {
             //component toekennen
             //worldentity sprite oproepen 
             //in game.java 
+            //zoeken online
+            
 
                 GraphicsContext gc = canvas.getGraphicsContext2D(); 
 

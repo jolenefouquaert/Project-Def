@@ -2,9 +2,11 @@
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/utils/entitysystemframework/annotations/Inject.java
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/utils/entitysystemframework/api/Component.java
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/project/Hello.java
+/Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/project/components/WorldComponent.java
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/utils/entitysystemframework/api/EntitySystem.java
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/utils/entitysystemframework/ioc/ManagedInstance.java
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/project/config/GameConfig.java
+/Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/project/systems/RenderSystem.java
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/utils/entitysystemframework/api/Engine.java
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/utils/entitysystemframework/api/Entity.java
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/project/Game.java
@@ -13,6 +15,8 @@
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/project/Main.java
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/utils/entitysystemframework/ioc/ContainerImpl.java
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/project/config/ControlsConfig.java
+/Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/project/components/PlayerComponent.java
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/utils/entitysystemframework/util/TaskQueue.java
+/Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/project/components/TextureComponent.java
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/project/config/Config.java
 /Users/Jolene/Desktop/Project Def/src/main/java/org/ibcn/gso/utils/entitysystemframework/ioc/ManagedInstanceImpl.java

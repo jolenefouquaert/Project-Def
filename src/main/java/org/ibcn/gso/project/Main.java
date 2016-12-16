@@ -51,7 +51,7 @@ public class Main extends Application {
 
             // Create game
             Game game = new Game(config);
-            Canvas canvas = new Canvas(gcf.getScreenWidth(), gcf.getScreenHeight());
+            //Canvas canvas = new Canvas(gcf.getScreenWidth(), gcf.getScreenHeight());
            
             
             //render system dat je als laatste oproept
@@ -63,18 +63,18 @@ public class Main extends Application {
             //zoeken online
             
 
-                GraphicsContext gc = canvas.getGraphicsContext2D(); 
+              //  GraphicsContext gc = canvas.getGraphicsContext2D();  //game in container  //in rendersystem  haal je hem op uit je container
 
-                Image sprite = new Image("sprites/level1.png");
+               // Image sprite = new Image("sprites/level1.png"); //texture component +  wereld entity om te halen
 
-                gc.drawImage(sprite, 0, 0);
-                Scene gameScene = new Scene(new Group(canvas));
+                //gc.drawImage(sprite, 0, 0); //system
+               // Scene gameScene = new Scene(new Group(canvas));
 
 
 
 
             // Setup stage
-            primaryStage.setScene(gameScene);
+            primaryStage.setScene(game.getScene());
             
            
            

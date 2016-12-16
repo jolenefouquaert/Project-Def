@@ -1,5 +1,6 @@
 package org.ibcn.gso.project;
 
+import com.sun.scenario.effect.impl.state.RenderState;
 import java.awt.Color;
 import javafx.animation.AnimationTimer;
 import javafx.event.EventHandler;
@@ -8,10 +9,15 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.input.MouseEvent;
+import org.ibcn.gso.project.components.TextureComponent;
+import org.ibcn.gso.project.components.WorldComponent;
 
 import org.ibcn.gso.project.config.GameConfig;
 import org.ibcn.gso.project.config.GraphicsConfig;
+import org.ibcn.gso.project.systems.RenderSystem;
+import org.ibcn.gso.utils.entitysystemframework.api.Entity;
 import org.ibcn.gso.utils.entitysystemframework.impl.IoCEngine;
+import org.ibcn.gso.utils.entitysystemframework.ioc.Container;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,8 +28,9 @@ public class Game extends AnimationTimer {
     private Scene scene;
     private Canvas canvas;
     private final IoCEngine engine = new IoCEngine();
-
+    private Container container;
     private final GameConfig config;
+  
 
     public Game(GameConfig config) throws Exception {
         this.config = config;
@@ -43,16 +50,32 @@ public class Game extends AnimationTimer {
     }
 
     private void initBackground() {
-        //Initialize the world Entity
+        
+        Entity  worldEntity = new Entity();
+        worldEntity.add(new TextureComponent("sprites/level1.png"));
+        worldEntity.add(new WorldComponent());
+        engine.add(worldEntity);
+        
+        
     }
 
     private void initPlayer() {
-        // Initialize the player Entity
+        Entity  playerEntity = new Entity();
+        playerEntity.add(new TextureComponent("sprites/player/1.png"));
+        playerEntity.add(new WorldComponent());
+        engine.add(playerEntity);
+        
     }
 
     private void initUI() {
         // Set up graphics container
+       
         canvas = new Canvas(config.get(GraphicsConfig.class).getScreenWidth(), config.get(GraphicsConfig.class).getScreenHeight());
+        container = engine.getContainer();
+        container.bind(canvas.getGraphicsContext2D());
+        
+        //canvas.getGraphicsContext2D() //binden aan IoC container ! 
+        
         scene = new Scene(new Group(canvas));
         // Hides the OS cursor
         scene.setCursor(Cursor.NONE);
@@ -99,6 +122,9 @@ public class Game extends AnimationTimer {
 
     private void initSystems() throws Exception {
         //Register the game systems with the Engine
+        
+        engine.registerSystem(RenderSystem.class);
+        
     }
 
     public Scene getScene() {
